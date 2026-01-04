@@ -145,18 +145,19 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
 
 .shot{
   margin: 0;
-  border-radius: 16px;                 /* 跟 card/头像同风格 */
+  border-radius: 16px;
   overflow: hidden;
-  border: 1px solid var(--border);     /* 和整体边框一致 */
-  background: rgba(255,255,255,0.35);  /* 图没加载出来也不突兀 */
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.35);
 }
 
 .shot img{
   width: 100%;
-  aspect-ratio: 4 / 3;     /* 统一比例：看起来更“科研主页” */
-  object-fit: cover;
+  height: auto;          /* ✅ 高度跟随原比例 */
+  object-fit: contain;   /* ✅ 不裁切，尽量全显示 */
   display: block;
 }
+
 
 
 h3{ margin: 0 0 6px; font-size: 18px; }
