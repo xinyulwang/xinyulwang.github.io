@@ -48,14 +48,13 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
 .meta a{ text-decoration:none; border-bottom: 1px dashed var(--border); }
 
 .avatar{
-  width: 300px;
-  height: 300px;
+  width: 440px;
+  height: 440px;
   object-fit: cover;
   border-radius: 22px;
   border: 1px solid var(--border);
   box-shadow: 0 18px 50px rgba(0,0,0,0.15);
   justify-self: end;
-  filter: brightness(1.1);
 }
 
 
