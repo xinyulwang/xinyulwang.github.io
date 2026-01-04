@@ -1,24 +1,24 @@
 :root{
-  --bg: #fbf7ff;                 /* 雾面淡紫底 */
-  --card: rgba(255,255,255,0.62);/* 让卡片更“玻璃感”高级 */
+  --bg: #fbfbfc;                  /* Fog White 底色 */
+  --card: rgba(255,255,255,0.72); /* 玻璃卡片更干净 */
   --text: rgba(0,0,0,0.88);
   --muted: rgba(0,0,0,0.60);
-  --border: rgba(87,6,140,0.10); /* 用淡紫做边框，更协调 */
+  --border: rgba(0,0,0,0.10);     /* 统一灰边框（别用紫了） */
 }
+
 
 *{ box-sizing: border-box; }
 html,body{ margin:0; padding:0; }
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background:
-    linear-gradient(0deg, rgba(255,255,255,0.18), rgba(255,255,255,0.18)),
-    radial-gradient(1200px 800px at 18% 0%, rgba(87,6,140,0.10), transparent 62%),
-    radial-gradient(1000px 700px at 88% 12%, rgba(147,51,234,0.08), transparent 60%),
-    radial-gradient(900px 650px at 55% 105%, rgba(87,6,140,0.06), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0) 45%),
+    radial-gradient(1200px 800px at 18% 0%, rgba(0,0,0,0.06), transparent 62%),
+    radial-gradient(1000px 700px at 88% 12%, rgba(0,0,0,0.04), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.80), rgba(255,255,255,0) 45%),
     var(--bg);
   color: var(--text);
 }
+
 
 
 
@@ -101,7 +101,10 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
+
 
 .grid{
   display:grid;
