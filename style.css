@@ -1,9 +1,9 @@
 :root{
-  --bg: #fbf7ff;
-  --card: rgba(0,0,0,0.04);
+  --bg: #fbf7ff;                 /* 雾面淡紫底 */
+  --card: rgba(255,255,255,0.62);/* 让卡片更“玻璃感”高级 */
   --text: rgba(0,0,0,0.88);
   --muted: rgba(0,0,0,0.60);
-  --border: rgba(0,0,0,0.10);
+  --border: rgba(87,6,140,0.10); /* 用淡紫做边框，更协调 */
 }
 
 *{ box-sizing: border-box; }
@@ -11,11 +11,14 @@ html,body{ margin:0; padding:0; }
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background:
-    radial-gradient(1200px 700px at 15% 0%, rgba(87,6,140,0.08), transparent 60%),
-    radial-gradient(900px 600px at 90% 10%, rgba(147,51,234,0.06), transparent 55%),
+    radial-gradient(1200px 800px at 18% 0%, rgba(87,6,140,0.10), transparent 62%),
+    radial-gradient(1000px 700px at 88% 12%, rgba(147,51,234,0.08), transparent 60%),
+    radial-gradient(900px 650px at 55% 105%, rgba(87,6,140,0.06), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0) 45%),
     var(--bg);
   color: var(--text);
 }
+
 
 
 a{ color: var(--text); }
