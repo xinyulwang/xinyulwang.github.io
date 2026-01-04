@@ -137,26 +137,35 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
   gap: 14px; /* 跟你 grid 的 gap 统一 */
 }
 
-@media (min-width: 900px){
-  .gallery{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+/* Personal: 3 photos in one row, centers aligned, no frame, no inner whitespace */
+.gallery{
+  display: flex;
+  align-items: center;   /* ✅ 三张图的中心在同一条线上 */
+  gap: 14px;
+  flex-wrap: wrap;       /* 小屏自动换行 */
 }
 
-
+/* 取消每张图的“框”感 */
 .shot{
   margin: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.35);
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
 }
 
+/* 按原比例显示，不裁切，不出现“contain 的留白框” */
 .shot img{
-  width: 100%;
-  height: auto;          /* ✅ 高度跟随原比例 */
-  object-fit: contain;   /* ✅ 不裁切，尽量全显示 */
+  height: 210px;         /* ✅ 统一“高度”，比例自然保持；你可改 180~240 */
+  width: auto;           /* ✅ 原比例 */
+  max-width: 100%;
   display: block;
+  border-radius: 14px;   /* 可选：想完全没修饰就删掉这行 */
+}
+
+/* 大屏尽量不换行 */
+@media (min-width: 900px){
+  .gallery{ flex-wrap: nowrap; }
 }
 
 
