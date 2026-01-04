@@ -139,9 +139,10 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
 
 @media (min-width: 900px){
   .gallery{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
 
 .shot{
   margin: 0;
