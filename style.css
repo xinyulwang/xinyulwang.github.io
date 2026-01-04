@@ -24,7 +24,7 @@ body{
 }
 
 h1, h2, h3, .brand{
-  font-family: "Space Grotesk", "Plus Jakarta Sans", "Noto Sans SC", sans-serif;
+  font-family: "Plus Jakarta Sans", "Noto Sans SC", sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -66,11 +66,14 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
 }
 
 .name-cn{
-  font-size: 0.7em;   /* 小一点：可试 0.6~0.7 */
-  font-weight: 400;    /* 正常字重（不加粗） */
-  margin-left: 0.3em;
+  font-size: 0.7em;
+  font-weight: 400;
+  margin-left: 0.32em;
   white-space: nowrap;
+  position: relative;
+  top: 0.06em;
 }
+
 
 
 /* 你可以改成你喜欢的紫色 */
@@ -127,6 +130,34 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
+/* ===== PERSONAL gallery ===== */
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px; /* 跟你 grid 的 gap 统一 */
+}
+
+@media (min-width: 900px){
+  .gallery{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.shot{
+  margin: 0;
+  border-radius: 16px;                 /* 跟 card/头像同风格 */
+  overflow: hidden;
+  border: 1px solid var(--border);     /* 和整体边框一致 */
+  background: rgba(255,255,255,0.35);  /* 图没加载出来也不突兀 */
+}
+
+.shot img{
+  width: 100%;
+  aspect-ratio: 4 / 3;     /* 统一比例：看起来更“科研主页” */
+  object-fit: cover;
+  display: block;
+}
+
 
 h3{ margin: 0 0 6px; font-size: 18px; }
 .muted{ color: var(--muted); margin: 6px 0 10px; }
