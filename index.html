@@ -1,1 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xinyu Wang</title>
+  <meta name="description" content="Xinyu Wang - Research Homepage" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#">Xinyu Wang</a>
+      <nav class="nav">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#news">News</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Xinyu (Yuyu) Wang</h1>
+        <p class="subtitle">
+          M.S. student in Electrical Engineering at NYU Tandon.
+          I work on perception-centered visual computing, with a focus on interpretable aesthetic modeling and perceptual objectives.
+        </p>
+
+        <div class="meta">
+          <span>📍 Brooklyn, NY</span>
+          <span>✉️ <a href="mailto:your_email@nyu.edu">your_email@nyu.edu</a></span>
+          <span>🔗 <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a></span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img class="avatar" src="assets/profile.jpg" alt="Profile photo" />
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+      <h2>Research Summary</h2>
+      <div class="card">
+        <p>
+          My research connects image/video statistics to human perception, aesthetics, and experience.
+          I’m interested in building interpretable and controllable models that explain <b>why</b> visual content looks/feels a certain way,
+          and how to optimize visual media for perceptual quality under constraints like compression and immersive displays.
+        </p>
+        <ul class="bullets">
+          <li><b>Interpretable factors</b> for aesthetics and perceptual quality</li>
+          <li><b>Rating distribution prediction</b> (not just a single mean score)</li>
+          <li><b>Perception-aware objectives</b> for visual media optimization</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Explainable Image Aesthetic Modeling</h3>
+          <p class="muted">
+            Ongoing work on interpretable features for predicting 10-bin aesthetic rating distributions.
+          </p>
+          <ul class="bullets">
+            <li>Designed factor-based features and evaluated contributions via ablations.</li>
+            <li>Modeled full rating distributions and studied stability across different splits.</li>
+            <li>Status: <b>work in progress</b>.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Real-Time Music-Driven Visual Modulation</h3>
+          <p class="muted">
+            A real-time system that modulates a static image using audio features (volume/pitch).
+          </p>
+          <ul class="bullets">
+            <li>Extracted real-time audio features and mapped them to visual controls.</li>
+            <li>Built a responsive pipeline for interactive visual feedback.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="section">
+      <h2>News</h2>
+      <div class="card">
+        <ul class="news">
+          <li><span class="date">Jan 2026</span> Revising a manuscript and preparing for submission (in progress).</li>
+          <li><span class="date">Jan 2026</span> Ongoing work on perception-centered image aesthetics (work in progress).</li>
+        </ul>
+        <p class="muted small">
+          Tip (double-blind safe): avoid posting paper title/PDF/arXiv links during review.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Xinyu Wang</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
