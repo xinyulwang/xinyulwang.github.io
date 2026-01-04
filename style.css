@@ -130,42 +130,43 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
-/* ===== PERSONAL gallery ===== */
-.gallery{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px; /* 跟你 grid 的 gap 统一 */
-}
-
-/* Personal: 3 photos in one row, centers aligned, no frame, no inner whitespace */
+/* 三张图在 card 内水平均匀分布 */
 .gallery{
   display: flex;
-  align-items: center;   /* ✅ 三张图的中心在同一条线上 */
+  align-items: center;           /* ✅ 图片中心同一水平线 */
+  justify-content: space-between;/* ✅ 三张均匀铺开 */
   gap: 14px;
-  flex-wrap: wrap;       /* 小屏自动换行 */
 }
 
-/* 取消每张图的“框”感 */
+/* 每张占同等宽度 */
 .shot{
   margin: 0;
+  flex: 1;                       /* ✅ 三等分 */
+  display: flex;
+  justify-content: center;        /* ✅ 图片在自己那一格里居中 */
   border: 0;
   background: transparent;
-  border-radius: 0;
-  overflow: visible;
 }
 
-/* 按原比例显示，不裁切，不出现“contain 的留白框” */
+/* 保持原比例，尽量放大但不裁切 */
 .shot img{
-  height: 210px;         /* ✅ 统一“高度”，比例自然保持；你可改 180~240 */
-  width: auto;           /* ✅ 原比例 */
   max-width: 100%;
+  max-height: 230px;             /* ✅ 你可调 200~260 */
+  width: auto;
+  height: auto;
   display: block;
-  border-radius: 14px;   /* 可选：想完全没修饰就删掉这行 */
+  border-radius: 14px;           /* 可选：不想圆角就删掉 */
 }
 
-/* 大屏尽量不换行 */
-@media (min-width: 900px){
-  .gallery{ flex-wrap: nowrap; }
+/* 小屏自动换行更舒服 */
+@media (max-width: 860px){
+  .gallery{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .shot{
+    flex: 1 1 260px;             /* 一行最多两张/一张 */
+  }
 }
 
 
