@@ -10,8 +10,11 @@
 *{ box-sizing: border-box; }
 html,body{ margin:0; padding:0; }
 body{
-  font-family: "Avenir", "Afacad", ui-sans-serif, system-ui, -apple-system,
+  font-family: "Plus Jakarta Sans", "Noto Sans SC", ui-sans-serif, system-ui, -apple-system,
                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background:
     radial-gradient(1200px 800px at 18% 0%, rgba(0,0,0,0.06), transparent 62%),
     radial-gradient(1000px 700px at 88% 12%, rgba(0,0,0,0.04), transparent 60%),
@@ -19,6 +22,12 @@ body{
     var(--bg);
   color: var(--text);
 }
+
+h1, h2, h3, .brand{
+  font-family: "Space Grotesk", "Plus Jakarta Sans", "Noto Sans SC", sans-serif;
+  letter-spacing: -0.02em;
+}
+
 
 
 
