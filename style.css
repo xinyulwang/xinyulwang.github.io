@@ -189,6 +189,24 @@ h3{ margin: 0 0 6px; font-size: 18px; }
 
 
 
+
+
+
+.footer{
+  padding: 22px 0 30px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 26px;
+}
+
+@media (max-width: 860px){
+  .hero{ grid-template-columns: 1fr; }
+  .avatar{ justify-self: start; width: 180px; height: 180px; }
+  .grid{ grid-template-columns: 1fr; }
+  h1{ font-size: 34px; }
+}
+
+
 /* ===== Projects: full-width rows with left thumbnail ===== */
 .projects-list{
   display: flex;
@@ -283,20 +301,4 @@ h3{ margin: 0 0 6px; font-size: 18px; }
   }
 }
 
-
-
-
-.footer{
-  padding: 22px 0 30px;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
-  margin-top: 26px;
-}
-
-@media (max-width: 860px){
-  .hero{ grid-template-columns: 1fr; }
-  .avatar{ justify-self: start; width: 180px; height: 180px; }
-  .grid{ grid-template-columns: 1fr; }
-  h1{ font-size: 34px; }
-}
 
