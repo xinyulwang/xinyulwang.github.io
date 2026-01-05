@@ -133,8 +133,8 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
 /* 三张图在 card 内水平均匀分布 */
 .gallery{
   display: flex;
-  align-items: center;           /* ✅ 图片中心同一水平线 */
-  justify-content: space-between;/* ✅ 三张均匀铺开 */
+  align-items: center;
+  justify-content: center; /* ✅ 更均匀稳定 */
   gap: 14px;
 }
 
