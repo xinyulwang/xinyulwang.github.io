@@ -187,6 +187,105 @@ h3{ margin: 0 0 6px; font-size: 18px; }
   font-weight: 600;
 }
 
+
+
+/* ===== Projects: full-width rows with left thumbnail ===== */
+.projects-list{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Make each project card flatter (roughly half-height of typical cards) */
+.project-card{
+  display: flex;
+  gap: 14px;
+  padding: 12px 14px;      /* smaller padding => shorter height */
+  align-items: stretch;
+}
+
+/* Left thumbnail */
+.project-thumb{
+  flex: 0 0 160px;         /* thumbnail column width */
+  height: 110px;           /* control overall card height */
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.02);
+}
+
+.project-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* keeps it neat */
+  display: block;
+}
+
+/* Placeholder style when no image yet */
+.project-thumb.placeholder{
+  display: grid;
+  place-items: center;
+  color: rgba(0,0,0,0.45);
+  font-size: 14px;
+}
+
+/* Right content */
+.project-body{
+  flex: 1;
+  min-width: 0;
+}
+
+.project-head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.project-head h3{
+  margin: 0;
+}
+
+.project-tag{
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.02);
+  white-space: nowrap;
+}
+
+/* More compact bullets for flatter cards */
+.bullets.compact{
+  margin-top: 6px;
+  margin-bottom: 0;
+  padding-left: 18px;
+}
+
+.bullets.compact li{
+  margin: 2px 0;
+}
+
+/* Mobile: stack image above text */
+@media (max-width: 720px){
+  .project-card{
+    flex-direction: column;
+  }
+  .project-thumb{
+    flex-basis: auto;
+    width: 100%;
+    height: 180px;
+  }
+  .project-head{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+
 .footer{
   padding: 22px 0 30px;
   color: var(--muted);
