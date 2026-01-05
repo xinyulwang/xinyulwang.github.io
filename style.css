@@ -218,9 +218,10 @@ h3{ margin: 0 0 6px; font-size: 18px; }
 .project-card{
   display: flex;
   gap: 14px;
-  padding: 12px 14px;      /* smaller padding => shorter height */
-  align-items: stretch;
+  padding: 12px 14px;
+  align-items: center;   /* ✅ 竖直居中 */
 }
+
 
 /* Left thumbnail */
 .project-thumb{
