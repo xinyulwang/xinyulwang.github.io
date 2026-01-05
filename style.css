@@ -61,7 +61,7 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
   margin: 0 0 18px;
   color: #000;                 /* ✅ 黑色 */
   font-size: 18px;             /* ✅ 变大：你也可以 22px */
-  line-height: 1.45;           /* ✅ 更舒服 */
+  line-height: 1.45;           /* ✅ */
   max-width: 62ch;             /* 可选：更好读 */
 }
 
@@ -100,8 +100,8 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
 .meta a{ text-decoration:none; border-bottom: 1px dashed var(--border); }
 
 .avatar{
-  width: 320px;
-  height: 320px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 22px;
   border: 1px solid var(--border);
