@@ -100,7 +100,7 @@ h1{ margin: 0 0 10px; font-size: 40px; line-height:1.15; }
 .meta a{ text-decoration:none; border-bottom: 1px dashed var(--border); }
 
 .avatar{
-  width: 300px;
+  width: 280px;
   height: 300px;
   object-fit: cover;
   border-radius: 22px;
